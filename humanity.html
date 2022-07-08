@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>走进重庆</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/humanity.css" rel="stylesheet">
+    <link href="img/logo.png"     rel="shortcut icon">
+    <style>
+      @font-face{
+        font-family: "中山行书百年纪念版";
+        src: url("fonts/中山行书百年纪念版.ttf");
+      }
+    </style>
+  </head>
+  <body  data-spy="scroll" data-target="#myScrollspy" data-offset="10">
+    <!-- 导航栏 -->
+    <div class="navbar" id="top">
+      <div class="navbar-head">
+        <a href="index.html" class="navbar-brand">走进重庆</a>
+      </div>
+      <nav class="nav1">
+        <ul class="ul1">
+          <li class="li1"><a href="index.html">首页</a></li>
+          <li class="li1"><a href="scenery.html">美景</a></li>
+          <li class="li1"><a href="food.html">美食</a></li>
+          <li class="li1"><a href="humanity.html">人文</a></li>
+          <li class="li1"><a href="custom.html">习俗</a></li>
+          <li class="li1"><a href="baogao.html">报告</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- banner -->
+    <div>
+      <div onclick="playPause()">
+        <video id="video" class="video" autoplay poster="img/333.jpg">
+          <source src="video/2.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <!-- 内容 -->
+    <div class="body">
+      <div class="container">
+        <div class="humanity">
+          <div class="humanity-header">
+            <h3>磁器口庙会</h3>
+          </div>
+          <div class="humanity-body">
+            <div class="humanity-body-body">
+              <div class="humanity-body-body-img">
+                <img class="img-responsive" src="img/27.jpg" alt="img1">
+                <div class="humanity-body-body-img-title">
+                  <span>磁器口庙会</span>
+                </div>
+              </div>
+              <p>庙会之俗，古已有之。庙会活动主要是烧香拜佛，求愿还愿，和尚或主寺念经做法事，吃斋饭(素食）等。磁器口宝轮寺、凤凰山庙，初一、十五庙会时，信徒上千，参观者游览者亦不少。逛庙会，适情任性，行止不拘。或走马观花，从街头至街尾，观腰鼓、扇子舞、花车，看一街的大红灯笼高高挂，听一街的吉祥话语，揽一怀的快活回家;或一饱口福，穿街而行，一街的老招牌招客，满街美食飘香;或坐老茶馆品一碗酽酽的盖碗茶，临窗览一江的风情，抬眼赏一壁的锦绣字画，隔桌听老一辈的人摆磁器口的老龙门阵。每逢农历初一、十五，以及释迦牟尼出生日、观音菩萨生日、春节、放生日等等，四乡八场的人都来赶磁器口庙会，烧香拜佛，求愿还愿。</p>
+            </div>
+          </div>
+          <div class="humanity-body">
+            <div class="humanity-body-header">
+              <h4>大足石刻艺术节</h4>
+            </div>
+            <div class="humanity-body-body">
+              <div class="humanity-body-body-img">
+                <img class="img-responsive" src="img/28.jpg" alt="img2">
+              <div class="humanity-body-body-img-title">
+                <span>大足石刻艺术节</span>
+              </div>
+              </div>
+              <p>大足石刻创于晚唐，盛于两宋，以佛教造像为主，儒、道造像并陈，是我国晚期石窟造像艺术的典范。大足石刻规模宏大，内容丰富，造像集中，技艺精湛，在我国的宗教、艺术、历史、文化史上，都占有重要地位。"凡佛典所载，无不备列的大足石刻，素材生动，想象丰富，包罗万象。纵横华夏千载文化，容纳人世百态，不仅是一座丰富的文化宝库，也是一幅生动的历史画卷。大足石刻以北山、宝顶山石刻造像最集中，内容最丰富，艺术最精湛，造像最精美，1961年被国务院公布为第一批全国重点文物保护单位，1999年被联合国教科文组织列为世界文化遗产。节日活动有石刻艺术风情表演、石刻艺术文化晚会、经贸洽谈、大足石刻艺术学术研讨会。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 底栏 -->
+    <a id="last"></a>
+    <footer class="footer">
+        <div class="footerbar">
+          <div>
+            <a class="footerbar-header" href="index.html">跟随我们走进重庆</a>
+          </div>
+          <div class="footerbar-body">
+            <span><a href="index.html">回到首页</a></span>
+              <span><a href="scenery.html">赏重庆美景</a></span>
+              <span><a href="food.html">享重庆美食</a></span>
+              <span><a href="humanity.html">读重庆人文</a></span>
+              <span><a href="food.html">识重庆习俗</a></span>
+              <span><a href="baogao.html">查设计报告</a></span>
+          </div>
+          <div class="footerbar-footer">
+            <p>cqjtu 2022期末作业</p>
+          </div>
+          </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script src="js/humanity.js"></script>
+  </body>
+</html>

@@ -1,0 +1,193 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+/* 导航栏 */
+.navbar{
+    position: relative;
+    width: 100%;
+    min-width: 1518px;
+	overflow: hidden;
+    background-color:rgba(83, 247, 247, 0.162);
+}
+.navbar-head{
+    width: 200px;
+    height: 75px;
+    margin: 0 auto;
+}
+.navbar-brand{
+    font-family: "中山行书百年纪念版";
+    font-size: 50px;
+}
+.nav1{
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    padding:10px;
+    margin-bottom: 35px;
+    box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.4);
+}
+.nav1 .ul1 .li1{
+    list-style: none;
+    display: inline-block;
+    padding: 13px 94px;
+    margin: 10px;
+    font-size: large;
+    color: rgb(119, 119, 119);
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.5s;
+}
+.nav1 .ul1 .li1::after{
+    content: '';
+    background: #f44566;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top :100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    opacity: 0;
+    transition: top 0.5s,opacity 0.5s;
+}
+.nav1 .ul1 .li1:hover{
+    color: #fff;
+}
+.nav1 .ul1 .li1:hover::after{
+    top :50%;
+    opacity: 1;
+}
+
+/* 内容 */
+.banner{
+    margin-top: 50px;
+}
+.video{
+    width: 100%;
+    position: relative;
+    min-width: 1518px;
+    cursor: pointer;
+}
+.body{
+    margin-top: -5px;
+    padding: 50px 0 100px 0;
+    background: #F4F4F4;
+}
+.humanity{
+    margin: 0 auto;
+    width: 80%;
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    background-color:rgba(255,255,255,1);
+}
+.humanity-body{
+    border-bottom: 1px solid #e7e7e7;
+    padding: 10px 0 20px 0;
+}
+.humanity-body:last-of-type{
+    border-bottom: none;
+}
+.humanity-body-body{
+    padding-top: 10px;
+}
+.humanity-body-body-img{
+    position: relative;
+}
+.humanity-body-body-img img{
+    width: 60%;
+    padding-bottom: 15px;
+}
+.humanity-body-body-img-title{
+    position: absolute;
+    bottom: 20px;
+    width: 60%;
+    text-align: center;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    padding: 8px 0;
+    color: white;
+}
+.humanity-body-body p{
+    text-indent: 2em;
+    width: 100%;
+}
+/* 底栏 */
+.footer{
+    background: #282828;
+}
+.footerbar{
+    padding: 30px 0 20px 0;
+    text-align: center;
+}
+.footerbar-header{
+    color: #cdcdcd;
+    font-family: "中山行书百年纪念版";
+    font-size: 30px;
+}
+.footerbar-body{
+    padding-top: 10px;
+}
+.footerbar-body span{
+    display: block;
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+.footerbar-body span a{
+    font-size: 16px;
+    color: #666666;
+    font-weight: 100;
+}
+.footerbar-body span a:hover{
+    color: #cdcdcd;
+}
+.footerbar-footer{
+    color: #666666;
+    font-size: 12px;
+}
+@media (min-width: 768px){
+    .footerbar-body{
+        padding: 10px 0 20px 0;
+    }
+    .footerbar-body span{
+        display: inline;
+        padding: 0 30px;
+    }
+}
+@media (min-width: 992px){
+    .footerbar-body{
+        padding: 10px 0 20px 0;
+    }
+    .footerbar-body span{
+        display: inline;
+        padding: 0 30px;
+    }
+}
+@media (min-width: 1200px){
+    .humanity-body-body{
+        clear: both;
+    }
+    .humanity-body-body p{
+        width: 70%;
+        padding-right: 25px;
+    }
+    .humanity-body-body-img{
+        float: right;
+        width: 30%;
+    }
+    .footerbar-body span{
+        display: inline;
+        padding: 0 30px;
+    }
+    .footerbar-body{
+        padding: 10px 0 20px 0;
+    }
+}

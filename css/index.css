@@ -1,0 +1,534 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+
+/* 侧边导航栏 */
+.shell {
+    position: fixed;
+    width: 100px;
+    height: 722px;
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(136, 209, 227, 0.3);
+    border-radius: 10px;
+    transition: .3s;
+    overflow: hidden;
+    float: left;
+    z-index: 1;
+}
+/* 侧边导航栏图标 */
+.shell img{
+    position: relative;
+            width: 70px;
+            height: 50px;
+        }
+        .boxfont{
+            font-weight: bold;
+            font-size: large;
+            padding-bottom: 20px;
+        }
+/* 侧边导航栏a标签样式 */
+        .box{
+            display:flex;
+            height: 50px;
+            width: 75%;
+            margin: 19px;
+            border-radius: 5px;
+            transition: .3s;
+            color: rgb(0, 0, 0);
+        }
+/* 侧边导航栏展开后的模块 */
+        .box span{
+            position: relative;
+            padding-top: 20px;
+            padding-left: 8px;
+            font: 400 20px '';
+            opacity: 0;
+            transition: .1s;
+        }
+        /* 展开宽度  */
+        .shell:hover{
+            width: 220px;
+            /* height: 100%; */
+        }
+/* 展开后span样式 */
+        .shell:hover span{
+            opacity: 1;
+        }
+         /* 鼠标悬浮时a标签样式 */
+.box:hover{
+            background-color: rgba(255, 0, 0, 0.162);
+            color: rgb(0, 0, 0);
+}
+/*3D翻转*/
+.cartoon_1 {
+    transition: transform 2s
+}
+
+.cartoon_1:hover {
+    transform: rotateY(360deg);
+}
+
+
+
+/* 导航栏 */
+/* 背景 */
+.background{
+    position:fixed; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index:0; 
+    width:100%; 
+    padding-top:0%; 
+    background: url(../img/background22.png) center center no-repeat; 
+    transform:scale(1);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.navbar{
+    position: relative;
+    width: 100%;
+    min-width: 1518px;
+	overflow: hidden;
+    background-color:rgba(231, 85, 165, 0.162);
+    z-index: 2;
+}
+.navbar-head{
+    width: 200px;
+    height: 75px;
+    margin: 0 auto;
+}
+.navbar-brand{
+    font-family: "中山行书百年纪念版";
+    font-size: 50px;
+    color: #000000;
+}
+.nav1{
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    padding:10px;
+    margin-bottom: 35px;
+    box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.4);
+}
+.nav1 .ul1 .li1{
+    list-style: none;
+    display: inline-block;
+    padding: 13px 96px;
+    margin: 10px;
+    font-size: large;
+    color: rgb(119, 119, 119);
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.5s;
+}
+.nav1 .ul1 .li1::after{
+    content: '';
+    background: #f44566;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top :100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    opacity: 0;
+    transition: top 0.5s,opacity 0.5s;
+}
+.nav1 .ul1 .li1:hover{
+    color: #fff;
+}
+.nav1 .ul1 .li1:hover::after{
+    top :50%;
+    opacity: 1;
+}
+
+
+
+
+
+
+/* 轮播图 */
+.carousel{
+    margin-top: 50px;
+    width: 100%;
+    min-width: 1518px;
+}
+input {
+	display: none;
+}
+.swiper {
+	/* 定位 */
+    position: relative;
+    width: 100%;
+    min-width: 1518px;
+    height:auto;
+	overflow: hidden;
+    z-index: 2;
+}
+/* 小圆圈属性 */
+label {
+	position: absolute;
+	bottom: 30px;
+	width: 20px;
+	height: 20px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	background-color: rgb(255, 255, 255);
+}
+/* 小圆圈位置 */
+label[for="btn1"] {
+	left: 40%;
+}
+label[for="btn2"] {
+	left: 45%;
+}
+label[for="btn3"] {
+	left: 50%;
+}
+label[for="btn4"] {
+	left: 55%;
+}
+label[for="btn5"] {
+	left: 60%;
+}
+
+/* 轮播图片设置 */
+.ul1 {
+	/* 让li水平排列 */
+	display: flex;
+	/* 自动计算宽度 */
+	width:calc(857px * 7);
+	/* 过渡时间 */
+	transition: all 0.5s;
+}
+li {
+	list-style-type: none;
+}
+
+/* 图片移动距离 */
+#btn1:checked ~ ul {
+	margin-left: 0;
+}
+#btn2:checked ~ ul {
+	margin-left: -857px;
+}
+#btn3:checked ~ ul {
+	margin-left: calc(-857px * 2);
+}
+#btn4:checked ~ ul {
+	margin-left: calc(-857px * 3);
+}
+#btn5:checked ~ ul {
+	margin-left: calc(-857px * 4);
+}
+/* 更换颜色 */
+#btn1:checked ~ label[for="btn1"] {
+	background-color: #f00;
+}
+#btn2:checked ~ label[for="btn2"] {
+	background-color: #f00;
+}
+#btn3:checked ~ label[for="btn3"] {
+	background-color: #f00;
+}
+#btn4:checked ~ label[for="btn4"] {
+	background-color: #f00;
+}
+#btn5:checked ~ label[for="btn5"] {
+	background-color: #f00;
+}
+
+
+/* 背景*/
+.body{
+    padding: 50px 0;
+    background: #F4F4F4;
+    z-index: 0;
+}
+/* 目录 */
+.position-body{
+    margin: 0 auto;
+    width: 607px;
+    padding: 10px 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+h3{
+    text-align: center;
+}
+.lab1{
+    margin-bottom: 5px;
+}
+div .span1 {
+    display:inline-block;
+    text-align:center;
+    padding-left: 87px;
+}
+div .span2 {
+    display:inline-block;
+    text-align:center;
+    padding-left: 87px;
+}
+
+div .span3 {
+    display:inline-block;
+    text-align:center;
+    padding-left: 87px;
+}
+.labcolor{
+    color: rgb(7, 10, 197);
+}
+
+
+/* 内容-了解重庆 */
+.about-body{
+    margin: 0 auto;
+    width: 80%;
+    padding: 10px 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+.about-body-body img{
+    height :450px;
+    width: 100%;
+}
+.about-body-body p{
+    text-indent: 2em;
+    padding: 10px 0;
+}
+/* 内容-地理环境 */
+.environment-body{
+    margin: 0 auto;
+    width: 80%;
+    padding: 10px 30px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+/* 内容-地理环境-位置境域 */
+.environment-body-body-location h4{
+    padding-top: 15px;
+}
+.environment-body-body-location p{
+    text-indent: 2em;
+}
+/* 内容-地理环境-地貌 */
+.environment-body-body-landform h4{
+    padding-top: 15px;
+}
+.environment-body-body-landform p{
+    text-indent: 2em;
+}
+.environment-body-body-landform img{
+    height :450px;
+    width: 100%;
+}
+/* 内容-地理环境-水文 */
+.environment-body-body-hydrology h4{
+    padding-top: 15px;
+}
+.environment-body-body-hydrology p{
+    text-indent: 2em;
+}
+/* 内容-地理环境-气候 */
+.environment-body-body-climate h4{
+    padding-top: 15px;
+}
+.environment-body-body-climate p{
+    text-indent: 2em;
+    padding-bottom: 10px;
+}
+/* 内容-自然资源-矿产资源 */
+.resources-body{
+    margin: 0 auto;
+    width: 80%;
+    padding: 10px 30px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 50px; 
+}
+.resources-body-body-mineral h4{
+    padding-top: 15px;
+}
+.resources-body-body-mineral img:first-of-type{
+    height :500px;
+    width: 100%;
+}
+.resources-body-body-mineral p{
+    text-indent: 2em;
+    padding-bottom: 10px;
+}
+.resources-body-body-mineral img:last-of-type{
+    height :450px;
+    width: 100%;
+}
+/* 内容-自然资源-生物资源 */
+.resources-body-body-biological h4{
+    padding-top: 15px;
+}
+.resources-body-body-biological p{
+    text-indent: 2em;
+    padding-bottom: 10px;
+}
+/* 内容-人口 */
+.population-body{
+    margin: 0 auto;
+    width: 80%;
+    padding: 10px 30px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 50px; 
+}
+.population-body-body img{
+    height :550px;
+    width: 100%;
+}
+.population-body-body p{
+    text-indent: 2em;
+    padding: 10px 0;
+}
+/* 著名人物 */
+.celebrity-body{
+    margin: 0 auto;
+    width: 80%;
+    padding: 10px 30px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 50px; 
+}
+.celebrity-body-body h4{
+    padding-top: 15px;
+}
+.celebrity-body-body p span{
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+}
+/* 城市荣誉 */
+.honor-body{
+    margin: 0 auto;
+    width: 80%;
+    padding: 10px 30px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 50px; 
+}
+.honor-body-body p{
+    padding: 10px 0;
+}
+/* 城市之最 */
+.most-body{
+    margin: 0 auto;
+    width: 80%;
+    padding: 10px 30px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 50px; 
+}
+.most-body-body p{
+    padding: 10px 0;
+}
+/* 底栏 */
+.footer{
+    background: #282828;
+}
+.footerbar{
+    padding: 30px 0 20px 0;
+    text-align: center;
+}
+.footerbar-header{
+    color: #cdcdcd;
+    font-family: "中山行书百年纪念版";
+    font-size: 30px;
+}
+.footerbar-body{
+    padding-top: 10px;
+}
+.footerbar-body span{
+    display: block;
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+.footerbar-body span a{
+    font-size: 16px;
+    color: #666666;
+    font-weight: 100;
+}
+.footerbar-body span a:hover{
+    color: #cdcdcd;
+}
+.footerbar-footer{
+    color: #666666;
+    font-size: 12px;
+}
+@media (min-width: 768px){
+    .celebrity-body-body span{
+        width: 49%;
+    }
+    .footerbar-body{
+        padding: 10px 0 20px 0;
+    }
+    .footerbar-body span{
+        display: inline;
+        padding: 0 30px;
+    }
+    #myScrollspy{
+        visibility: visible;
+    }
+    ul.nav-pills.affix{
+        right: 3%
+    }
+}
+@media (min-width: 992px){
+    .celebrity-body-body p span{
+        width: 49%;
+    }
+    .footerbar-body{
+        padding: 10px 0 20px 0;
+    }
+    .footerbar-body span{
+        display: inline;
+        padding: 0 30px;
+    }
+    #myScrollspy{
+        visibility: visible;
+    }
+    ul.nav-pills.affix{
+        right: 3%;
+    }
+}
+@media (min-width: 1200px){
+    .celebrity-body-body p span{
+        width: 33%;
+    }
+    .footerbar-body span{
+        display: inline;
+        padding: 0 30px;
+    }
+    .footerbar-body{
+        padding: 10px 0 20px 0;
+    }
+    #myScrollspy{
+        visibility: visible;
+    }
+    ul.nav-pills.affix{
+        right: 3%;
+    }
+}
